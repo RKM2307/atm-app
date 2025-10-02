@@ -1,0 +1,170 @@
+/* index.css - Enhanced ATM interface styles with vertical button spacing & keypad */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+  color: #e5e5e5;
+  margin: 0;
+  padding: 0;
+}
+
+.atm-container {
+  max-width: 420px;
+  margin: 50px auto;
+  padding: 25px;
+  background: linear-gradient(to bottom, #0f1923, #1b2a3b);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.atm-container:focus-within {
+  outline: 2px solid #00ff99;
+}
+
+.atm-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #00ff99;
+  text-shadow: 0 0 5px #00ff99;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 0; /* increased padding for touch-friendly buttons */
+  margin: 10px 0;  /* vertical spacing */
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;     /* full width for neat stacking */
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.btn-primary {
+  background-color: #007a5e;
+  color: #fff;
+}
+
+.btn-primary:hover,
+button.selected {
+  background-color: #00ff99;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 255, 153, 0.5);
+}
+
+.btn-secondary {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  font-size: 1.1rem;
+  background-color: #0a1a2b;
+  color: #e5e5e5;
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.4);
+  transition: all 0.2s;
+}
+
+input:focus {
+  outline: 2px solid #00ff99;
+  background-color: #061422;
+}
+
+.message {
+  margin: 8px 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.message.success {
+  color: #00ff99;
+  text-shadow: 0 0 3px #00ff99;
+}
+
+.message.error {
+  color: #ff4c4c;
+  text-shadow: 0 0 3px #ff4c4c;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 10px 12px;
+  border: 1px solid #00ff99;
+  text-align: center;
+}
+
+th {
+  background-color: #00332f;
+  color: #00ff99;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(0, 255, 153, 0.05);
+}
+
+tr:hover {
+  background-color: rgba(0, 255, 153, 0.2);
+}
+
+p {
+  font-size: 0.95rem;
+}
+
+/* Stack buttons vertically in forms and menus */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* space between stacked buttons */
+  margin-top: 20px;
+}
+
+/* Numeric keypad style placeholder */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.keypad button {
+  width: 100%;
+  padding: 18px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  background-color: #007a5e;
+  color: #fff;
+}
+
+.keypad button:hover {
+  background-color: #00ff99;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Smooth transition for interactive elements */
+button, input, .atm-container {
+  transition: all 0.3s ease;
+}
