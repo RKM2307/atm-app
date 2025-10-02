@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^6.9.0",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^6.3.0",
     "postcss-initial": "^4.0.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
